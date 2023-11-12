@@ -162,9 +162,4 @@ n_row_after = nrow(all)
 
 stopifnot(n_row_before == n_row_after)
 
-all %>%
-  filter(YEAR == 2022, PCT_CHG_10y <= -0.05) %>%
-  arrange(PCT_CHG_10y) %>%
-  View()
-
 readr::write_csv(all, "data/clean/enrollment_2013-14_2022-23.csv")
