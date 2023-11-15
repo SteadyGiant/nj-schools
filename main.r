@@ -156,7 +156,8 @@ all = all %>%
   dplyr::bind_rows(state, county) %>%
   dplyr::group_by(COUNTY_CODE, DISTRICT_CODE) %>%
   dplyr::mutate(
-    CHG = TOTAL_ENROLLMENT - dplyr::lag(TOTAL_ENROLLMENT, order_by = YEAR)
+    CHG = TOTAL_ENROLLMENT - dplyr::lag(TOTAL_ENROLLMENT, order_by = YEAR),
+    PCT_CHG = (TOTAL_ENROLLMENT / dplyr::lag(TOTAL_ENROLLMENT, order_by = YEAR)) - 1
   ) %>%
   dplyr::ungroup()
 
