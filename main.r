@@ -2,6 +2,7 @@ library(dplyr)
 library(purrr)
 library(readr)
 library(readxl)
+library(stringr)
 library(tibble)
 
 all_df = list()
@@ -117,17 +118,42 @@ all_df = append(all_df, list(df))
 
 all = purrr::list_rbind(all_df) %>%
   dplyr::filter(
-    !grepl("worksheet", COUNTY_CODE, ignore.case = TRUE),
-    !grepl("AGENCY|CHARTER|STATE", COUNTY_NAME),
-    DISTRICT_CODE != 9999
+    COUNTY_CODE != "End of worksheet",
+    # State, county totals not provided for every year. Calculate them.
+    DISTRICT_CODE != "9999"
   ) %>%
-  dplyr::arrange(DISTRICT_CODE, YEAR) %>%
+  dplyr::arrange(COUNTY_CODE, DISTRICT_CODE, YEAR) %>%
   dplyr::mutate(
     dplyr::across(c(YEAR, TOTAL_ENROLLMENT), as.numeric),
-    dplyr::across(c(COUNTY_NAME, DISTRICT_NAME), toupper),
+    dplyr::across(c(COUNTY_NAME, DISTRICT_NAME), stringr::str_to_title),
     YEAR_LONG = paste(YEAR, YEAR - 2000 + 1, sep = "-")
   ) %>%
-  dplyr::relocate(YEAR_LONG, .after = YEAR) %>%
+  dplyr::relocate(YEAR_LONG, .after = YEAR)
+
+state = all %>%
+  dplyr::group_by(YEAR, YEAR_LONG) %>%
+  dplyr::summarise(TOTAL_ENROLLMENT = sum(TOTAL_ENROLLMENT)) %>%
+  dplyr::ungroup() %>%
+  dplyr::mutate(
+    COUNTY_CODE   = "00",
+    COUNTY_NAME   = "State Total",
+    DISTRICT_CODE = "0000",
+    DISTRICT_NAME = "State Total"
+  ) %>%
+  dplyr::arrange(YEAR)
+
+county = all %>%
+  dplyr::group_by(YEAR, YEAR_LONG, COUNTY_CODE, COUNTY_NAME) %>%
+  dplyr::summarise(TOTAL_ENROLLMENT = sum(TOTAL_ENROLLMENT)) %>%
+  dplyr::ungroup() %>%
+  dplyr::mutate(
+    DISTRICT_CODE = "9999",
+    DISTRICT_NAME = "County Total"
+  ) %>%
+  dplyr::arrange(COUNTY_CODE, YEAR)
+
+all = all %>%
+  dplyr::bind_rows(state, county) %>%
   dplyr::group_by(COUNTY_CODE, DISTRICT_CODE) %>%
   dplyr::mutate(
     CHG = TOTAL_ENROLLMENT - dplyr::lag(TOTAL_ENROLLMENT, order_by = YEAR)
@@ -141,19 +167,19 @@ all_10y = all %>%
   dplyr::mutate(n = dplyr::n()) %>%
   dplyr::filter(n == 10) %>%
   dplyr::mutate(
-    CHG_10y = dplyr::if_else(
+    CHG_10Y = dplyr::if_else(
       YEAR == max(YEAR),
       TOTAL_ENROLLMENT[YEAR == max(YEAR)] - TOTAL_ENROLLMENT[YEAR == min(YEAR)],
       NA_real_
     ),
-    PCT_CHG_10y = dplyr::if_else(
+    PCT_CHG_10Y = dplyr::if_else(
       YEAR == max(YEAR),
       (TOTAL_ENROLLMENT[YEAR == max(YEAR)] / TOTAL_ENROLLMENT[YEAR == min(YEAR)]) - 1,
       NA_real_
     )
   ) %>%
   dplyr::ungroup() %>%
-  dplyr::select(YEAR, COUNTY_CODE, DISTRICT_CODE, CHG_10y, PCT_CHG_10y)
+  dplyr::select(YEAR, COUNTY_CODE, DISTRICT_CODE, CHG_10Y, PCT_CHG_10Y)
 
 all = all %>%
   dplyr::left_join(all_10y, by = c("YEAR", "COUNTY_CODE", "DISTRICT_CODE"))
