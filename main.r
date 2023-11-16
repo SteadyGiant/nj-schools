@@ -77,10 +77,8 @@ files = c(
   "2016" = "data/raw/enrollment_1617/enr.xlsx",
   "2015" = "data/raw/enrollment_1516/enr.xlsx",
   "2014" = "data/raw/enrollment_1415/enr.xlsx",
-  "2013" = "data/raw/enrollment_1314/enr.xlsx"# ,
-  # "2012" = "data/raw/enrollment_1213/enr.xlsx",
-  # "2011" = "data/raw/enrollment_1112/enr.xlsx",
-  # "2010" = "data/raw/enrollment_1011/enr.xls"
+  "2013" = "data/raw/enrollment_1314/enr.xlsx",
+  "2012" = "data/raw/enrollment_1213/enr.xlsx"
 )
 
 df = files %>%
@@ -163,10 +161,12 @@ all = all %>%
 
 n_row_before = nrow(all)
 
+# Calculate the "10-year change" in enrollment.
+# That is, start at 2012-23; ten academic years later, how did enrollment change?
 all_10y = all %>%
   dplyr::group_by(COUNTY_CODE, DISTRICT_CODE) %>%
   dplyr::mutate(n = dplyr::n()) %>%
-  dplyr::filter(n == 10) %>%
+  dplyr::filter(n == 11) %>%
   dplyr::mutate(
     CHG_10Y = dplyr::if_else(
       YEAR == max(YEAR),
@@ -189,4 +189,4 @@ n_row_after = nrow(all)
 
 stopifnot(n_row_before == n_row_after)
 
-readr::write_csv(all, "data/clean/enrollment_2013-14_2022-23.csv")
+readr::write_csv(all, "data/clean/enrollment_2012-13_2022-23.csv")
