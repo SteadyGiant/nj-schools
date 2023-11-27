@@ -4,6 +4,7 @@ library(readr)
 library(readxl)
 library(stringr)
 library(tibble)
+library(tidyr)
 
 all_df = list()
 
@@ -18,21 +19,29 @@ files = list(
 )
 
 df = files %>%
-  purrr::map_dfr(
-    readxl::read_excel,
-    sheet = "District",
-    skip = 2,
-    col_types = "text",
-    .id = "year"
+  purrr::map(
+    readxl::read_excel, sheet = "District", skip = 2, col_types = "text"
   ) %>%
-  `names<-`(
-    names(.) %>%
-      gsub(" ", "_", .) %>%
-      toupper()
+  # The 2019-20 sheet has a typo in a column name we need.
+  purrr::map_dfr(
+    ~{
+      .x %>%
+        `names<-`(
+          names(.x) %>%
+            gsub("Pre -K", "Pre-K", .) %>%
+            gsub(" ", "_", .) %>%
+            toupper()
+        )
+    },
+    .id = "YEAR"
+  ) %>%
+  dplyr::mutate(
+    dplyr::across(dplyr::matches("PRE-K"), as.numeric),
+    PRE_K_ENROLLMENT = `PRE-K_HALFDAY` + `PRE-K_FULLDAY`
   ) %>%
   dplyr::select(
     YEAR, COUNTY_CODE, COUNTY_NAME, DISTRICT_CODE, DISTRICT_NAME,
-    TOTAL_ENROLLMENT
+    TOTAL_ENROLLMENT, PRE_K_ENROLLMENT
   )
 
 # R has major warts.
@@ -41,31 +50,37 @@ all_df = append(all_df, list(df))
 
 ### 2017 - 2018
 
-years = c(
-  "2018",
-  "2017"
-)
-
 files = tibble::tribble(
-  ~path,                                            ~skip,
-  "data/raw/enrollment_1819/EnrollmentReport.xlsx", 2,
-  "data/raw/enrollment_1718/enr.xlsx",              1
+  ~year,  ~path,                                            ~skip,
+  "2018", "data/raw/enrollment_1819/EnrollmentReport.xlsx", 2,
+  "2017", "data/raw/enrollment_1718/enr.xlsx",              1
 )
 
-df = files %>%
-  purrr::pmap(readxl::read_excel, col_types = "text") %>%
-  `names<-`(years) %>%
+df = purrr::map2(
+  .x = files$path,
+  .y = files$skip,
+  ~readxl::read_excel(.x, skip = .y, col_types = "text")
+) %>%
+  `names<-`(files$year) %>%
   purrr::list_rbind(names_to = "YEAR") %>%
   `names<-`(toupper(names(.))) %>%
-  dplyr::rename(
-    COUNTY_CODE = COUNTY_ID,
-    DISTRICT_CODE = DIST_ID,
-    TOTAL_ENROLLMENT = ROW_TOTAL
+  dplyr::filter(
+    SCHOOL_NAME == "District Total", PRGCODE %in% c("55", "PF", "PH")
   ) %>%
-  dplyr::filter(SCHOOL_NAME == "District Total", PRGCODE == 55) %>%
-  dplyr::select(
-    YEAR, COUNTY_CODE, COUNTY_NAME, DISTRICT_CODE, DISTRICT_NAME,
-    TOTAL_ENROLLMENT
+  tidyr::pivot_wider(
+    id_cols = c(YEAR, COUNTY_ID, COUNTY_NAME, DIST_ID, DISTRICT_NAME),
+    # DISTRICT_LEVEL is inconsistent. See DISTRICT_CODE == 3180. When
+    # PRGCODE == PF I expect that GRADE_LEVEL == PK. Not true for some
+    # districts! Instead, GRADE_LEVEL == Total.
+    names_from = PRGCODE,
+    values_from = ROW_TOTAL
+  ) %>%
+  dplyr::rename(
+    COUNTY_CODE           = COUNTY_ID,
+    DISTRICT_CODE         = DIST_ID,
+    TOTAL_ENROLLMENT      = `55`,
+    PRE_K_FULL_ENROLLMENT = PF,
+    PRE_K_HALF_ENROLLMENT = PH
   )
 
 all_df = append(all_df, list(df))
@@ -100,13 +115,18 @@ df = files %>%
   ) %>%
   purrr::list_rbind(names_to = "YEAR") %>%
   dplyr::filter(
-    grepl("Total", SCHOOL_NAME, ignore.case = TRUE),
-    PRGCODE == 55
+    SCHOOL_CODE == "999",
+    PRGCODE %in% c("55", "PF", "PH")
   ) %>%
-  dplyr::rename(TOTAL_ENROLLMENT = ROW_TOTAL) %>%
-  dplyr::select(
-    YEAR, COUNTY_CODE, COUNTY_NAME, DISTRICT_CODE, DISTRICT_NAME,
-    TOTAL_ENROLLMENT
+  tidyr::pivot_wider(
+    id_cols = c(YEAR, COUNTY_CODE, COUNTY_NAME, DISTRICT_CODE, DISTRICT_NAME),
+    names_from = PRGCODE,
+    values_from = ROW_TOTAL
+  ) %>%
+  dplyr::rename(
+    TOTAL_ENROLLMENT      = `55`,
+    PRE_K_FULL_ENROLLMENT = PF,
+    PRE_K_HALF_ENROLLMENT = PH
   )
 
 all_df = append(all_df, list(df))
@@ -121,16 +141,23 @@ all = purrr::list_rbind(all_df) %>%
     DISTRICT_CODE != "9999"
   ) %>%
   dplyr::arrange(COUNTY_CODE, DISTRICT_CODE, YEAR) %>%
+  # Some districts have no record for PRGCODE == PH, etc. I assume that means
+  # they have no enrollment for missing grade levels.
+  tidyr::replace_na(
+    list(PRE_K_HALF_ENROLLMENT = "0", PRE_K_FULL_ENROLLMENT = "0")
+  ) %>%
   dplyr::mutate(
-    dplyr::across(c(YEAR, TOTAL_ENROLLMENT), as.numeric),
+    dplyr::across(c(YEAR, dplyr::ends_with("_ENROLLMENT")), as.numeric),
     dplyr::across(c(COUNTY_NAME, DISTRICT_NAME), stringr::str_to_title),
+    PRE_K_ENROLLMENT = PRE_K_FULL_ENROLLMENT + PRE_K_HALF_ENROLLMENT,
+    K_12_ENROLLMENT = TOTAL_ENROLLMENT - PRE_K_ENROLLMENT,
     YEAR_LONG = paste(YEAR, YEAR - 2000 + 1, sep = "-")
   ) %>%
   dplyr::relocate(YEAR_LONG, .after = YEAR)
 
 state = all %>%
   dplyr::group_by(YEAR, YEAR_LONG) %>%
-  dplyr::summarise(TOTAL_ENROLLMENT = sum(TOTAL_ENROLLMENT)) %>%
+  dplyr::summarise(dplyr::across(dplyr::ends_with("_ENROLLMENT"), sum)) %>%
   dplyr::ungroup() %>%
   dplyr::mutate(
     COUNTY_CODE   = "00",
@@ -142,7 +169,7 @@ state = all %>%
 
 county = all %>%
   dplyr::group_by(YEAR, YEAR_LONG, COUNTY_CODE, COUNTY_NAME) %>%
-  dplyr::summarise(TOTAL_ENROLLMENT = sum(TOTAL_ENROLLMENT)) %>%
+  dplyr::summarise(dplyr::across(dplyr::ends_with("_ENROLLMENT"), sum)) %>%
   dplyr::ungroup() %>%
   dplyr::mutate(
     DISTRICT_CODE = "9999",
@@ -154,8 +181,10 @@ all = all %>%
   dplyr::bind_rows(state, county) %>%
   dplyr::group_by(COUNTY_CODE, DISTRICT_CODE) %>%
   dplyr::mutate(
-    CHG = TOTAL_ENROLLMENT - dplyr::lag(TOTAL_ENROLLMENT, order_by = YEAR),
-    PCT_CHG = (TOTAL_ENROLLMENT / dplyr::lag(TOTAL_ENROLLMENT, order_by = YEAR)) - 1
+    CHG_TOTAL_ENROLLMENT     = TOTAL_ENROLLMENT - dplyr::lag(TOTAL_ENROLLMENT, order_by = YEAR),
+    PCT_CHG_TOTAL_ENROLLMENT = (TOTAL_ENROLLMENT / dplyr::lag(TOTAL_ENROLLMENT, order_by = YEAR)) - 1,
+    CHG_K_12_ENROLLMENT      = K_12_ENROLLMENT - dplyr::lag(K_12_ENROLLMENT, order_by = YEAR),
+    PCT_CHG_K_12_ENROLLMENT  = (K_12_ENROLLMENT / dplyr::lag(K_12_ENROLLMENT, order_by = YEAR)) - 1
   ) %>%
   dplyr::ungroup()
 
@@ -168,19 +197,32 @@ all_10y = all %>%
   dplyr::mutate(n = dplyr::n()) %>%
   dplyr::filter(n == 11) %>%
   dplyr::mutate(
-    CHG_10Y = dplyr::if_else(
+    CHG_10Y_TOTAL_ENROLLMENT = dplyr::if_else(
       YEAR == max(YEAR),
       TOTAL_ENROLLMENT[YEAR == max(YEAR)] - TOTAL_ENROLLMENT[YEAR == min(YEAR)],
       NA_real_
     ),
-    PCT_CHG_10Y = dplyr::if_else(
+    PCT_CHG_10Y_TOTAL_ENROLLMENT = dplyr::if_else(
       YEAR == max(YEAR),
       (TOTAL_ENROLLMENT[YEAR == max(YEAR)] / TOTAL_ENROLLMENT[YEAR == min(YEAR)]) - 1,
+      NA_real_
+    ),
+    CHG_10Y_K_12_ENROLLMENT = dplyr::if_else(
+      YEAR == max(YEAR),
+      K_12_ENROLLMENT[YEAR == max(YEAR)] - K_12_ENROLLMENT[YEAR == min(YEAR)],
+      NA_real_
+    ),
+    PCT_CHG_10Y_K_12_ENROLLMENT = dplyr::if_else(
+      YEAR == max(YEAR),
+      (K_12_ENROLLMENT[YEAR == max(YEAR)] / K_12_ENROLLMENT[YEAR == min(YEAR)]) - 1,
       NA_real_
     )
   ) %>%
   dplyr::ungroup() %>%
-  dplyr::select(YEAR, COUNTY_CODE, DISTRICT_CODE, CHG_10Y, PCT_CHG_10Y)
+  dplyr::select(
+    YEAR, COUNTY_CODE, DISTRICT_CODE,
+    dplyr::starts_with(c("CHG_10Y", "PCT_CHG_10Y"))
+  )
 
 all = all %>%
   dplyr::left_join(all_10y, by = c("YEAR", "COUNTY_CODE", "DISTRICT_CODE"))
