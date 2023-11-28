@@ -149,6 +149,8 @@ all = purrr::list_rbind(all_df) %>%
   dplyr::mutate(
     dplyr::across(c(YEAR, dplyr::ends_with("_ENROLLMENT")), as.numeric),
     dplyr::across(c(COUNTY_NAME, DISTRICT_NAME), stringr::str_to_title),
+    # NOTE: Half-day Pre-K seems like FTE. The row sum of all grade enrollments
+    # always equals the total enrollment column value.
     PRE_K_ENROLLMENT = PRE_K_FULL_ENROLLMENT + PRE_K_HALF_ENROLLMENT,
     K_12_ENROLLMENT = TOTAL_ENROLLMENT - PRE_K_ENROLLMENT,
     YEAR_LONG = paste(YEAR, YEAR - 2000 + 1, sep = "-")
