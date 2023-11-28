@@ -6,6 +6,8 @@ library(stringr)
 library(tibble)
 library(tidyr)
 
+options(scipen = 999)
+
 all_df = list()
 
 
@@ -51,6 +53,9 @@ all_df = append(all_df, list(df))
 
 
 ### 2017 - 2018
+
+# See COUNTY_NAME Agency DISTRICT_CODE 1431 DISTRICT_NAME Katzenbach. Same
+# COUNTY_CODE 21 as Mercer.
 
 files = tibble::tribble(
   ~year,  ~path,                                            ~skip,
@@ -164,9 +169,9 @@ state = all %>%
   dplyr::summarise(dplyr::across(dplyr::ends_with("_ENROLLMENT"), sum)) %>%
   dplyr::ungroup() %>%
   dplyr::mutate(
-    COUNTY_CODE   = "00",
+    COUNTY_CODE   = "99",
     COUNTY_NAME   = "State Total",
-    DISTRICT_CODE = "0000",
+    DISTRICT_CODE = "9999",
     DISTRICT_NAME = "State Total"
   ) %>%
   dplyr::arrange(YEAR)
@@ -195,9 +200,12 @@ all = all %>%
 n_row_before = nrow(all)
 
 # Calculate the "10-year change" in enrollment.
-# That is, start at 2012-23; ten academic years later, how did enrollment change?
+# That is, start at 2012-23; ten academic years later, how did enrollment
+# change?
 all_10y = all %>%
-  dplyr::group_by(COUNTY_CODE, DISTRICT_CODE) %>%
+  # Include County Name because of County Code 21 (Mercer) County Name Agency.
+  # It causes Mercer Co to be excluded. From the 2017-2019 sheets.
+  dplyr::group_by(COUNTY_CODE, COUNTY_NAME, DISTRICT_CODE) %>%
   dplyr::mutate(n = dplyr::n()) %>%
   dplyr::filter(n == 11) %>%
   dplyr::mutate(
