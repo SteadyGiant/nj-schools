@@ -35,13 +35,15 @@ df = files %>%
     },
     .id = "YEAR"
   ) %>%
-  dplyr::mutate(
-    dplyr::across(dplyr::matches("PRE-K"), as.numeric),
-    PRE_K_ENROLLMENT = `PRE-K_HALFDAY` + `PRE-K_FULLDAY`
-  ) %>%
   dplyr::select(
-    YEAR, COUNTY_CODE, COUNTY_NAME, DISTRICT_CODE, DISTRICT_NAME,
-    TOTAL_ENROLLMENT, PRE_K_ENROLLMENT
+    YEAR,
+    COUNTY_CODE,
+    COUNTY_NAME,
+    DISTRICT_CODE,
+    DISTRICT_NAME,
+    TOTAL_ENROLLMENT,
+    PRE_K_FULL_ENROLLMENT = `PRE-K_FULLDAY`,
+    PRE_K_HALF_ENROLLMENT = `PRE-K_HALFDAY`
   )
 
 # R has major warts.
@@ -136,7 +138,7 @@ all_df = append(all_df, list(df))
 
 all = purrr::list_rbind(all_df) %>%
   dplyr::filter(
-    COUNTY_CODE != "End of worksheet",
+    !is.na(COUNTY_NAME),
     # State, county totals not provided for every year. Calculate them.
     DISTRICT_CODE != "9999"
   ) %>%
