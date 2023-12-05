@@ -239,8 +239,33 @@ all_10y = all %>%
 all = all %>%
   dplyr::left_join(all_10y, by = c("YEAR", "COUNTY_CODE", "DISTRICT_CODE"))
 
+
+##############
+### Checks ###
+##############
+
 n_row_after = nrow(all)
 
 stopifnot(n_row_before == n_row_after)
+
+for (year in unique(all$YEAR_LONG)) {
+
+  sum_counties = all %>%
+    filter(DISTRICT_NAME == "County Total", YEAR_LONG == year) %>%
+    pull(K_12_ENROLLMENT) %>%
+    sum()
+
+  state_total = all %>%
+    filter(DISTRICT_NAME == "State Total", YEAR_LONG == year) %>%
+    pull(K_12_ENROLLMENT)
+
+  stopifnot(sum_counties == state_total)
+
+}
+
+
+##############
+### Export ###
+##############
 
 readr::write_csv(all, "data/clean/enrollment_2012-13_2022-23.csv")
