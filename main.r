@@ -11,9 +11,10 @@ options(scipen = 999)
 all_df = list()
 
 
-### 2019 - 2022
+### 2019 - 2023
 
 files = list(
+  "2023" = "data/raw/enrollment_2324.xlsx",
   "2022" = "data/raw/enrollment_2223.xlsx",
   "2021" = "data/raw/enrollment_2122.xlsx",
   "2020" = "data/raw/enrollment_2021.xlsx",
@@ -43,9 +44,9 @@ df = files %>%
     COUNTY_NAME,
     DISTRICT_CODE,
     DISTRICT_NAME,
-    TOTAL_ENROLLMENT,
-    PRE_K_FULL_ENROLLMENT = `PRE-K_FULLDAY`,
-    PRE_K_HALF_ENROLLMENT = `PRE-K_HALFDAY`
+    PK12_ENROLLMENT = TOTAL_ENROLLMENT,
+    PK_FULL_ENROLLMENT = `PRE-K_FULLDAY`,
+    PK_HALF_ENROLLMENT = `PRE-K_HALFDAY`
   )
 
 # R has major warts.
@@ -83,11 +84,11 @@ df = purrr::map2(
     values_from = ROW_TOTAL
   ) %>%
   dplyr::rename(
-    COUNTY_CODE           = COUNTY_ID,
-    DISTRICT_CODE         = DIST_ID,
-    TOTAL_ENROLLMENT      = `55`,
-    PRE_K_FULL_ENROLLMENT = PF,
-    PRE_K_HALF_ENROLLMENT = PH
+    COUNTY_CODE        = COUNTY_ID,
+    DISTRICT_CODE      = DIST_ID,
+    PK12_ENROLLMENT    = `55`,
+    PK_FULL_ENROLLMENT = PF,
+    PK_HALF_ENROLLMENT = PH
   )
 
 all_df = append(all_df, list(df))
@@ -131,9 +132,9 @@ df = files %>%
     values_from = ROW_TOTAL
   ) %>%
   dplyr::rename(
-    TOTAL_ENROLLMENT      = `55`,
-    PRE_K_FULL_ENROLLMENT = PF,
-    PRE_K_HALF_ENROLLMENT = PH
+    PK12_ENROLLMENT    = `55`,
+    PK_FULL_ENROLLMENT = PF,
+    PK_HALF_ENROLLMENT = PH
   )
 
 all_df = append(all_df, list(df))
@@ -151,15 +152,15 @@ all = purrr::list_rbind(all_df) %>%
   # Some districts have no record for PRGCODE == PH, etc. I assume that means
   # they have no enrollment for missing grade levels.
   tidyr::replace_na(
-    list(PRE_K_HALF_ENROLLMENT = "0", PRE_K_FULL_ENROLLMENT = "0")
+    list(PK_HALF_ENROLLMENT = "0", PK_FULL_ENROLLMENT = "0")
   ) %>%
   dplyr::mutate(
     dplyr::across(c(YEAR, dplyr::ends_with("_ENROLLMENT")), as.numeric),
     dplyr::across(c(COUNTY_NAME, DISTRICT_NAME), stringr::str_to_title),
     # NOTE: Half-day Pre-K seems like FTE. The row sum of all grade enrollments
     # always equals the total enrollment column value.
-    PRE_K_ENROLLMENT = PRE_K_FULL_ENROLLMENT + PRE_K_HALF_ENROLLMENT,
-    K_12_ENROLLMENT = TOTAL_ENROLLMENT - PRE_K_ENROLLMENT,
+    PK_ENROLLMENT = PK_FULL_ENROLLMENT + PK_HALF_ENROLLMENT,
+    K12_ENROLLMENT = PK12_ENROLLMENT - PK_ENROLLMENT,
     YEAR_LONG = paste(YEAR, YEAR - 2000 + 1, sep = "-")
   ) %>%
   dplyr::relocate(YEAR_LONG, .after = YEAR)
@@ -190,77 +191,34 @@ all = all %>%
   dplyr::bind_rows(state, county) %>%
   dplyr::group_by(COUNTY_CODE, DISTRICT_CODE) %>%
   dplyr::mutate(
-    CHG_TOTAL_ENROLLMENT     = TOTAL_ENROLLMENT - dplyr::lag(TOTAL_ENROLLMENT, order_by = YEAR),
-    PCT_CHG_TOTAL_ENROLLMENT = (TOTAL_ENROLLMENT / dplyr::lag(TOTAL_ENROLLMENT, order_by = YEAR)) - 1,
-    CHG_K_12_ENROLLMENT      = K_12_ENROLLMENT - dplyr::lag(K_12_ENROLLMENT, order_by = YEAR),
-    PCT_CHG_K_12_ENROLLMENT  = (K_12_ENROLLMENT / dplyr::lag(K_12_ENROLLMENT, order_by = YEAR)) - 1
+    DISTRICT_NAME               = DISTRICT_NAME[YEAR == max(YEAR)],
+    CHG_PK12_ENROLLMENT         = PK12_ENROLLMENT - dplyr::lag(PK12_ENROLLMENT, order_by = YEAR),
+    PCT_CHG_PK12_ENROLLMENT     = (PK12_ENROLLMENT / dplyr::lag(PK12_ENROLLMENT, order_by = YEAR)) - 1,
+    CHG_10YR_PK12_ENROLLMENT    = PK12_ENROLLMENT - dplyr::lag(PK12_ENROLLMENT, n = 10, order_by = YEAR),
+    PCT_CHG_10Y_PK12_ENROLLMENT = (PK12_ENROLLMENT / dplyr::lag(PK12_ENROLLMENT, n = 10, order_by = YEAR)) - 1,
+    CHG_K12_ENROLLMENT          = K12_ENROLLMENT - dplyr::lag(K12_ENROLLMENT, order_by = YEAR),
+    PCT_CHG_K12_ENROLLMENT      = (K12_ENROLLMENT / dplyr::lag(K12_ENROLLMENT, order_by = YEAR)) - 1,
+    CHG_10Y_K12_ENROLLMENT      = K12_ENROLLMENT - dplyr::lag(K12_ENROLLMENT, n = 10, order_by = YEAR),
+    PCT_CHG_10Y_K12_ENROLLMENT  = (K12_ENROLLMENT / dplyr::lag(K12_ENROLLMENT, n = 10, order_by = YEAR)) - 1
   ) %>%
   dplyr::ungroup()
-
-n_row_before = nrow(all)
-
-# Calculate the "10-year change" in enrollment.
-# That is, start at 2012-23; ten academic years later, how did enrollment
-# change?
-all_10y = all %>%
-  # Include County Name because of County Code 21 (Mercer) County Name Agency.
-  # It causes Mercer Co to be excluded. From the 2017-2019 sheets.
-  dplyr::group_by(COUNTY_CODE, COUNTY_NAME, DISTRICT_CODE) %>%
-  dplyr::mutate(n = dplyr::n()) %>%
-  dplyr::filter(n == 11) %>%
-  dplyr::mutate(
-    CHG_10Y_TOTAL_ENROLLMENT = dplyr::if_else(
-      YEAR == max(YEAR),
-      TOTAL_ENROLLMENT[YEAR == max(YEAR)] - TOTAL_ENROLLMENT[YEAR == min(YEAR)],
-      NA_real_
-    ),
-    PCT_CHG_10Y_TOTAL_ENROLLMENT = dplyr::if_else(
-      YEAR == max(YEAR),
-      (TOTAL_ENROLLMENT[YEAR == max(YEAR)] / TOTAL_ENROLLMENT[YEAR == min(YEAR)]) - 1,
-      NA_real_
-    ),
-    CHG_10Y_K_12_ENROLLMENT = dplyr::if_else(
-      YEAR == max(YEAR),
-      K_12_ENROLLMENT[YEAR == max(YEAR)] - K_12_ENROLLMENT[YEAR == min(YEAR)],
-      NA_real_
-    ),
-    PCT_CHG_10Y_K_12_ENROLLMENT = dplyr::if_else(
-      YEAR == max(YEAR),
-      (K_12_ENROLLMENT[YEAR == max(YEAR)] / K_12_ENROLLMENT[YEAR == min(YEAR)]) - 1,
-      NA_real_
-    )
-  ) %>%
-  dplyr::ungroup() %>%
-  dplyr::select(
-    YEAR, COUNTY_CODE, DISTRICT_CODE,
-    dplyr::starts_with(c("CHG_10Y", "PCT_CHG_10Y"))
-  )
-
-all = all %>%
-  dplyr::left_join(all_10y, by = c("YEAR", "COUNTY_CODE", "DISTRICT_CODE"))
 
 
 ##############
 ### Checks ###
 ##############
 
-n_row_after = nrow(all)
-
-stopifnot(n_row_before == n_row_after)
-
 for (year in unique(all$YEAR_LONG)) {
-
   sum_counties = all %>%
     filter(DISTRICT_NAME == "County Total", YEAR_LONG == year) %>%
-    pull(K_12_ENROLLMENT) %>%
+    pull(K12_ENROLLMENT) %>%
     sum()
 
   state_total = all %>%
     filter(DISTRICT_NAME == "State Total", YEAR_LONG == year) %>%
-    pull(K_12_ENROLLMENT)
+    pull(K12_ENROLLMENT)
 
   stopifnot(sum_counties == state_total)
-
 }
 
 
@@ -268,4 +226,4 @@ for (year in unique(all$YEAR_LONG)) {
 ### Export ###
 ##############
 
-readr::write_csv(all, "data/clean/enrollment_2012-13_2022-23.csv")
+readr::write_csv(all, "data/clean/enrollment_2012-13_2023-24.csv")

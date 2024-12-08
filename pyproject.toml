@@ -1,0 +1,13 @@
+[project]
+name = "nj-schools"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "altair>=5.5.0",
+    "fastexcel",
+    "ibis-framework[duckdb]",
+    "ipykernel>=6.29.5",
+    "polars",
+]
