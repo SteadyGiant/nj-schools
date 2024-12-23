@@ -253,4 +253,15 @@ all %>%
   dplyr::select(-`% change, 2013-14`) %>%
   dplyr::rename(`% change` = `% change, 2023-24`) %>%
   dplyr::filter(!is.na(`% change`)) %>%
-  readr::write_csv("data/clean/enrollment_2012-13_2013-24__condensed.csv")
+  readr::write_csv("data/clean/enrollment_2013-14_2023-24__condensed.csv")
+
+all %>%
+  dplyr::filter(DISTRICT_NAME == "Glassboro School District") %>%
+  dplyr::select(
+    `Academic year`     = YEAR_LONG,
+    `PK-12 enrollment`  = PK12_ENROLLMENT,
+    Change              = CHG_PK12_ENROLLMENT,
+    `% change`          = PCT_CHG_PK12_ENROLLMENT,
+    `10-yr % change`    = PCT_CHG_10Y_PK12_ENROLLMENT
+  ) %>%
+  readr::write_csv("data/clean/enrollment_2013-14__glassboro.csv")
