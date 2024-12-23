@@ -242,7 +242,7 @@ all %>%
     County             = COUNTY_NAME,
     `School district`  = DISTRICT_NAME,
     `K-12 enrollment`  = K12_ENROLLMENT,
-    `% change` = PCT_CHG_10Y_K12_ENROLLMENT
+    `% change`         = PCT_CHG_10Y_K12_ENROLLMENT
   ) %>%
   tidyr::pivot_wider(
     id_cols = c(County, `School district`),
@@ -252,4 +252,5 @@ all %>%
   ) %>%
   dplyr::select(-`% change, 2013-14`) %>%
   dplyr::rename(`% change` = `% change, 2023-24`) %>%
+  dplyr::filter(!is.na(`% change`)) %>%
   readr::write_csv("data/clean/enrollment_2012-13_2013-24__condensed.csv")

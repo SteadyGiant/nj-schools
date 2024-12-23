@@ -99,7 +99,6 @@ Bergen,Westwood Regional School District,2666,2723.5,0.021567891972993358
 Bergen,Wood-Ridge School District,1125,1202,0.06844444444444453
 Bergen,Woodcliff Lake School District,747,747,0
 Bergen,Wyckoff Township Public School District,2121,1985,-0.06412069778406415
-Burlington,Bass River Twp,110,NA,NA
 Burlington,Beverly City School District,250,283,0.1319999999999999
 Burlington,Bordentown Regional School District,2549,2151,-0.15613966261278933
 Burlington,Burlington City Public School District,1543,1646,0.06675307841866496
@@ -136,7 +135,6 @@ Burlington,Shamong Township School District,834,657,-0.21223021582733814
 Burlington,Southampton Township School District,729,674,-0.07544581618655688
 Burlington,Springfield Township School District,247,268,0.08502024291497978
 Burlington,Tabernacle Township School District,757,664,-0.12285336856010565
-Burlington,Washington Twp,23,NA,NA
 Burlington,Westampton Township Public School District,972,868,-0.10699588477366251
 Burlington,Willingboro Public School District,3625,3333,-0.08055172413793099
 Burlington,Woodland Township School District,141,93,-0.34042553191489366
@@ -156,9 +154,6 @@ Camden,Eastern Camden County Regional School District,2049,1898,-0.0736944851146
 Camden,Gibbsboro Elementary School District,246,239,-0.028455284552845517
 Camden,Gloucester City Public School District,1820,2157,0.18516483516483517
 Camden,Gloucester Township Public Schools,6668,6111,-0.08353329334133175
-Camden,"Kipp: Cooper Norcross, A New Jersey Nonprofit Corporation",NA,2247,NA
-Camden,"Camden Prep, Inc.",NA,1465,NA
-Camden,"Mastery Schools Of Camden, Inc.",NA,2889,NA
 Camden,Haddon Heights School District,1238,1443,0.1655896607431342
 Camden,Haddon Township School District,1990,1977,-0.006532663316582865
 Camden,Haddonfield School District,2477,2690,0.08599111828825201
@@ -283,7 +278,6 @@ Hunterdon,Clinton Township School District,1467,1133,-0.22767552828902526
 Hunterdon,Delaware Township School District,390,380,-0.02564102564102566
 Hunterdon,Delaware Valley Regional High School District,911,665,-0.27003293084522506
 Hunterdon,East Amwell Township School District,385,341,-0.11428571428571432
-Hunterdon,South Hunterdon Regional School District,NA,717,NA
 Hunterdon,Flemington-Raritan Regional School District,3372,3043,-0.09756820877817318
 Hunterdon,Franklin Township School District,277,257,-0.07220216606498198
 Hunterdon,Frenchtown Borough School District,125,91,-0.272
@@ -291,23 +285,17 @@ Hunterdon,Hampton Borough School District,67,83,0.23880597014925375
 Hunterdon,High Bridge Borough School District,345,300,-0.13043478260869568
 Hunterdon,Holland Township School District,575,475,-0.17391304347826086
 Hunterdon,Hunterdon Central Regional High School District,2953.5,2374,-0.19620788894531915
-Hunterdon,Hunterdon County Educational Services Commission,93.5,NA,NA
 Hunterdon,Hunterdon County Vocational School District,236.5,578.5,1.4460887949260042
 Hunterdon,Kingwood Township School District,355,317,-0.10704225352112673
-Hunterdon,Lambertville City,239,NA,NA
 Hunterdon,Lebanon Borough School District,80,72,-0.09999999999999998
 Hunterdon,Lebanon Township School District,709,540,-0.23836389280677006
 Hunterdon,Milford Borough School District,88,55,-0.375
 Hunterdon,North Hunterdon-Voorhees Regional High School District,2770,1920,-0.3068592057761733
 Hunterdon,Readington Township School District,1753,1359,-0.22475755847119228
-Hunterdon,South Hunterdon Regional,412.5,NA,NA
-Hunterdon,Stockton Boro,50,NA,NA
 Hunterdon,Tewksbury Township School District,674,472,-0.2997032640949555
 Hunterdon,Union Township School District,497,444,-0.10663983903420526
-Hunterdon,West Amwell Twp,234,NA,NA
 Mercer,East Windsor Regional School District,5075,4969,-0.020886699507389195
 Mercer,Ewing Township School District,3580.5,3422,-0.04426756039659263
-Mercer,Marie H. Katzenbach School For The Deaf,NA,80,NA
 Mercer,Hamilton Township Public School District,11923.5,11831,-0.00775778923973669
 Mercer,Hopewell Valley Regional School District,3649,3288.5,-0.09879419018909286
 Mercer,Lawrence Township Public School District,3956,3590,-0.09251769464105153
@@ -584,7 +572,6 @@ Warren,North Warren Regional School District,963,619,-0.35721703011422634
 Warren,Oxford Township School District,300,237,-0.20999999999999996
 Warren,Phillipsburg School District,3422,3649.5,0.06648158971361773
 Warren,Pohatcong Township School District,339,287,-0.15339233038348088
-Warren,Warren Co Special Service,38,NA,NA
 Warren,Warren County Vocational Technical School,444,406,-0.0855855855855856
 Warren,Warren Hills Regional School District,1873,1546,-0.17458622530699408
 Warren,Washington Borough School District,522,488,-0.06513409961685823
