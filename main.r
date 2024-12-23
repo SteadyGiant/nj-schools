@@ -203,6 +203,8 @@ all = all %>%
   ) %>%
   dplyr::ungroup()
 
+rm(all_df, county, df, files, state)
+
 
 ##############
 ### Checks ###
@@ -221,9 +223,31 @@ for (year in unique(all$YEAR_LONG)) {
   stopifnot(sum_counties == state_total)
 }
 
+rm(state_total, sum_counties, year)
+
 
 ##############
 ### Export ###
 ##############
 
 readr::write_csv(all, "data/clean/enrollment_2012-13_2023-24.csv")
+
+all %>%
+  dplyr::filter(YEAR %in% c(2013, 2023)) %>%
+  dplyr::select(
+    YEAR_LONG,
+    County             = COUNTY_NAME,
+    `School district`  = DISTRICT_NAME,
+    `K-12 enrollment`  = K12_ENROLLMENT,
+    `% change` = PCT_CHG_10Y_K12_ENROLLMENT
+  ) %>%
+  tidyr::pivot_wider(
+    id_cols = c(County, `School district`),
+    names_from = YEAR_LONG,
+    values_from = c(`K-12 enrollment`, `% change`),
+    names_sep = ", "
+  ) %>%
+  dplyr::select(-`% change, 2013-14`) %>%
+  dplyr::rename(`% change` = `% change, 2023-24`) %>%
+  View()
+  readr::write_csv("data/clean/enrollment_2012-13_2013-24__condensed.csv")
