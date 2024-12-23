@@ -233,7 +233,10 @@ rm(state_total, sum_counties, year)
 readr::write_csv(all, "data/clean/enrollment_2012-13_2023-24.csv")
 
 all %>%
-  dplyr::filter(YEAR %in% c(2013, 2023)) %>%
+  dplyr::filter(
+    YEAR %in% c(2013, 2023),
+    COUNTY_NAME != "Charters"
+  ) %>%
   dplyr::select(
     YEAR_LONG,
     County             = COUNTY_NAME,
@@ -249,5 +252,4 @@ all %>%
   ) %>%
   dplyr::select(-`% change, 2013-14`) %>%
   dplyr::rename(`% change` = `% change, 2023-24`) %>%
-  View()
   readr::write_csv("data/clean/enrollment_2012-13_2013-24__condensed.csv")
