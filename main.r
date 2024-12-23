@@ -256,7 +256,10 @@ all %>%
   readr::write_csv("data/clean/enrollment_2013-14_2023-24__condensed.csv")
 
 all %>%
-  dplyr::filter(DISTRICT_NAME == "Glassboro School District") %>%
+  dplyr::filter(
+    DISTRICT_NAME == "Glassboro School District",
+    YEAR > 2012
+  ) %>%
   dplyr::select(
     `Academic year`     = YEAR_LONG,
     `PK-12 enrollment`  = PK12_ENROLLMENT,
