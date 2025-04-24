@@ -1,0 +1,603 @@
+County,School district,"K-12 enrollment, 2014-15","K-12 enrollment, 2024-25",% change
+Atlantic,Absecon Public Schools District,828,778,-0.06038647342995174
+Atlantic,Atlantic City School District,6919,5798,-0.16201763260586788
+Atlantic,Atlantic County Vocational School District,1398.5,1852,0.3242760100107258
+Atlantic,Atlantic County Special Services School District,408,321,-0.21323529411764708
+Atlantic,Brigantine Public School District,638,320,-0.4984326018808778
+Atlantic,Buena Regional School District,1785,1429,-0.1994397759103641
+Atlantic,Egg Harbor City School District,445,486,0.09213483146067425
+Atlantic,Egg Harbor Township School District,7463,6783,-0.09111617312072895
+Atlantic,Estell Manor School District,163,174,0.06748466257668717
+Atlantic,Folsom Borough School District,402,353,-0.12189054726368154
+Atlantic,Galloway Township Public School District,3243,2829,-0.12765957446808507
+Atlantic,Greater Egg Harbor Regional High School District,3312,3007,-0.09208937198067635
+Atlantic,Hamilton Township School District,2963,2493,-0.1586230172122849
+Atlantic,Hammonton School District,3478,3114,-0.10465784933870037
+Atlantic,Linwood City School District,840,749,-0.10833333333333328
+Atlantic,Mainland Regional High School,1355.5,1159,-0.14496495758022865
+Atlantic,Margate City School District,423,322,-0.23877068557919623
+Atlantic,Mullica Township School District,712,539,-0.2429775280898876
+Atlantic,Northfield City School District,927,815,-0.12081984897518883
+Atlantic,Pleasantville Public School District,3285,3358,0.022222222222222143
+Atlantic,Port Republic School District,130,110,-0.15384615384615385
+Atlantic,Somers Point School District,927,587,-0.3667745415318231
+Atlantic,Ventnor City School District,728,412,-0.4340659340659341
+Atlantic,Weymouth Township School District,163,148,-0.09202453987730064
+Bergen,Allendale Public School District,884,841,-0.04864253393665163
+Bergen,Alpine Public School District,155,146,-0.058064516129032295
+Bergen,Bergen County Special Services School District,719.5,634,-0.11883252258512855
+Bergen,Bergen County Vocational Technical School District,2107,2872.5,0.363312766967252
+Bergen,Bergenfield Borough School District,3417,3462.5,0.013315774070822295
+Bergen,Bogota Public School District,1068.5,1238,0.15863359850257375
+Bergen,Carlstadt Public School District,551,460,-0.16515426497277674
+Bergen,Carlstadt-East Rutherford Regional High School District,488.5,849.5,0.7389969293756398
+Bergen,Cliffside Park School District,2878.5,3036,0.05471599791558113
+Bergen,Closter Public School District,1094,1162,0.06215722120658129
+Bergen,Cresskill Public School District,1750,1721,-0.01657142857142857
+Bergen,Demarest School District,678,733,0.08112094395280245
+Bergen,Dumont Public School District,2535.5,2424.5,-0.04377834746598308
+Bergen,East Rutherford School District,744,749,0.006720430107526987
+Bergen,Edgewater School District,824,673,-0.183252427184466
+Bergen,Elmwood Park School District,2403.5,2526,0.050967339296858816
+Bergen,Emerson Public School District,1155,1000,-0.1341991341991342
+Bergen,Englewood Public School District,2893,2574.5,-0.11009332872450739
+Bergen,Englewood Cliffs School District,515,389,-0.24466019417475726
+Bergen,Fair Lawn Public School District,4701,5398,0.1482663263135504
+Bergen,Fairview Public School District,1247,1420,0.13873295910184447
+Bergen,Fort Lee School District,3688,3925,0.0642624728850325
+Bergen,Franklin Lakes School District,1192,1124,-0.057046979865771785
+Bergen,Garfield Public School District,4361.5,4191,-0.0390920554854981
+Bergen,Glen Rock Public School District,2388,2524,0.05695142378559459
+Bergen,Hackensack School District,5462.5,4993.5,-0.08585812356979405
+Bergen,Harrington Park School District,637,610,-0.042386185243328045
+Bergen,Hasbrouck Heights School District,1871.5,1614.5,-0.13732300293881916
+Bergen,Haworth Public School District,407,469,0.15233415233415237
+Bergen,Hillsdale School District,1227,1092,-0.11002444987775062
+Bergen,Ho-Ho-Kus School District,623,564,-0.0947030497592295
+Bergen,Leonia Public School District,1814.5,1928,0.06255166712593008
+Bergen,Little Ferry Public School District,949,766,-0.19283456269757637
+Bergen,Lodi School District,3110,2916.5,-0.062218649517684854
+Bergen,Lyndhurst Public School District,2334.5,2545,0.09016920111372895
+Bergen,Mahwah Township Public School District,3019.5,2619,-0.13263785394932937
+Bergen,Maywood School District,928,944,0.01724137931034475
+Bergen,Midland Park School District,967,880.5,-0.08945191313340228
+Bergen,Montvale Board Of Education School District,1032,949,-0.08042635658914732
+Bergen,Moonachie School District,269,313,0.16356877323420083
+Bergen,New Milford Public School District,1983.5,1935.5,-0.024199647088479992
+Bergen,North Arlington School District,1716,1891,0.10198135198135194
+Bergen,Northern Highlands Regional High School District,1372,1257,-0.08381924198250734
+Bergen,Northern Valley Regional High School District,2531,2271.5,-0.10252864480442514
+Bergen,Northvale Public School District,509,524,0.02946954813359537
+Bergen,Norwood Public School District,586,554,-0.05460750853242324
+Bergen,Oakland Public School District,1551,1265,-0.18439716312056742
+Bergen,Old Tappan Public School District,738,732,-0.008130081300813052
+Bergen,Oradell Public School District,725,799,0.10206896551724132
+Bergen,Palisades Park School District,1603,1667,0.03992514036182149
+Bergen,Paramus Public School District,3815,3428,-0.10144167758846656
+Bergen,Park Ridge School District,1245,1108,-0.11004016064257027
+Bergen,Pascack Valley Regional High School District,2027.5,1691.5,-0.1657213316892725
+Bergen,Ramapo Indian Hills Regional High School District,2313,1831.5,-0.20817120622568097
+Bergen,Ramsey School District,2828,2253.5,-0.20314710042432815
+Bergen,Ridgefield School District,1695,1478,-0.12802359882005898
+Bergen,Ridgefield Park Public School District,2348.5,1977.5,-0.15797317436661695
+Bergen,Ridgewood Public School District,5673.5,5293,-0.06706618489468585
+Bergen,River Dell Regional School District,1671.5,1595.5,-0.045468142387077526
+Bergen,River Edge School District,1181,1152,-0.024555461473327655
+Bergen,River Vale Public School District,1213,990,-0.18384171475680133
+Bergen,Rochelle Park School District,444,434,-0.022522522522522515
+Bergen,Rutherford School District,2501.5,2471.5,-0.011992804317409567
+Bergen,Saddle Brook School District,1645,1769,0.07537993920972652
+Bergen,Saddle River School District,167,105,-0.37125748502994016
+Bergen,South  Bergen Jointure Commission School District,284,251,-0.1161971830985915
+Bergen,South Hackensack School District,230,210,-0.08695652173913049
+Bergen,Teaneck School District,3609,3282.5,-0.0904682737600443
+Bergen,Tenafly Public School District,3595,3385.5,-0.058275382475660664
+Bergen,Upper Saddle River School District,1236,1089,-0.1189320388349514
+Bergen,Waldwick School District,1569.5,1520,-0.03153870659445679
+Bergen,Wallington Boro School District,1280.5,1157,-0.09644670050761417
+Bergen,Westwood Regional School District,2699.5,2701.5,7.408779403592636e-4
+Bergen,Wood-Ridge School District,1147.5,1266,0.10326797385620923
+Bergen,Woodcliff Lake School District,749,720,-0.03871829105473967
+Bergen,Wyckoff Township Public School District,2076,1991,-0.040944123314065495
+Burlington,Beverly City School District,252,301,0.19444444444444442
+Burlington,Bordentown Regional School District,2561,2115,-0.1741507223740726
+Burlington,Burlington City Public School District,1512,1605,0.06150793650793651
+Burlington,Burlington County Special Services School District,581,496,-0.14629948364888123
+Burlington,Burlington County Institute Of Technology School District,2056,2196,0.06809338521400776
+Burlington,Burlington Township School District,3956,3383,-0.14484327603640046
+Burlington,Chesterfield Township School District,705,646,-0.08368794326241136
+Burlington,Cinnaminson Township School District,2385.5,2896,0.21400125759798794
+Burlington,Delanco Township School District,387,345,-0.10852713178294571
+Burlington,Delran Township School District,2955,2790,-0.055837563451776595
+Burlington,Eastampton Township School District,593,537,-0.09443507588532885
+Burlington,Edgewater Park Township School District,823,930,0.13001215066828675
+Burlington,Evesham Township School District,4515,4291,-0.04961240310077519
+Burlington,Florence Township School District,1598,1399,-0.1245306633291614
+Burlington,Hainesport Township School District,629,479,-0.23847376788553254
+Burlington,Lenape Regional High School District,6841,6440,-0.058617161233737725
+Burlington,Lumberton Township Board Of Education,1470,1048,-0.28707482993197275
+Burlington,Mansfield Township School District,649,518,-0.20184899845916793
+Burlington,Maple Shade School District,2226,2194,-0.014375561545372895
+Burlington,Medford Lakes School District,523,422,-0.19311663479923513
+Burlington,Medford Township School District,2693,2688,-0.0018566654288897366
+Burlington,Moorestown Township Public School District,3866,3798,-0.01758923952405589
+Burlington,Mount Holly Township Public School District,938,984,0.049040511727078906
+Burlington,Mount Laurel Township School District,4170,4061,-0.026139088729016824
+Burlington,New Hanover Township,167,171,0.0239520958083832
+Burlington,North Hanover Township School District,1103,1148,0.040797824116047154
+Burlington,Northern Burlington County Regional School District,2113,2062,-0.024136299100804504
+Burlington,Palmyra Public School District,931,936,0.005370569280343629
+Burlington,Pemberton Township School District,4446,3733,-0.1603688708951867
+Burlington,Rancocas Valley Regional High School District,2077,1928,-0.07173808377467505
+Burlington,Riverside Township School District,1313,1456,0.10891089108910901
+Burlington,Riverton School District,278,244,-0.12230215827338131
+Burlington,Shamong Township School District,798,632,-0.20802005012531333
+Burlington,Southampton Township School District,726,688,-0.052341597796143224
+Burlington,Springfield Township School District,230,271,0.17826086956521747
+Burlington,Tabernacle Township School District,767,669,-0.1277705345501956
+Burlington,Westampton Township Public School District,943,910,-0.03499469777306474
+Burlington,Willingboro Public School District,3549,3317,-0.06537052690898848
+Burlington,Woodland Township School District,146,90,-0.3835616438356164
+Camden,Audubon Public School District,1528,1355,-0.11321989528795806
+Camden,Barrington School District,611,512,-0.1620294599018003
+Camden,Bellmawr Public School District,1082,1004,-0.07208872458410354
+Camden,Berlin Borough School District,834,810,-0.02877697841726623
+Camden,Berlin Township School District,603,564,-0.06467661691542292
+Camden,Black Horse Pike Regional School District,3786,3405,-0.10063391442155312
+Camden,Brooklawn Public School District,316,251,-0.20569620253164556
+Camden,Camden City School District,10056,5108,-0.49204455051710416
+Camden,Camden County Technical School District,2118,2189,0.033522190745986835
+Camden,Cherry Hill School District,10960,10447,-0.04680656934306571
+Camden,Clementon Elementary School District,408,532,0.303921568627451
+Camden,Collingswood Public School District,1836,1996,0.08714596949891074
+Camden,Eastern Camden County Regional School District,2014,1847,-0.08291956305858983
+Camden,Gibbsboro Elementary School District,256,226,-0.1171875
+Camden,Gloucester City Public School District,1794,2167,0.20791527313266434
+Camden,Gloucester Township Public Schools,6488,6096,-0.06041923551171391
+Camden,"Kipp: Cooper Norcross, A New Jersey Nonprofit Corporation",104,2280,20.923076923076923
+Camden,"Camden Prep, Inc.",70,1498,20.4
+Camden,"Mastery Schools Of Camden, Inc.",368,2873,6.807065217391305
+Camden,Haddon Heights School District,1273,1448,0.1374705420267086
+Camden,Haddon Township School District,2048,1964,-0.041015625
+Camden,Haddonfield School District,2525,2683,0.06257425742574263
+Camden,Laurel Springs School District,198,166,-0.16161616161616166
+Camden,Lawnside School District,250,295,0.17999999999999994
+Camden,Lindenwold Public School District,2491,2953,0.18546768366118016
+Camden,Magnolia School District,399,350,-0.1228070175438597
+Camden,Merchantville School District,349,367,0.05157593123209159
+Camden,Mt. Ephraim School District,408,373,-0.08578431372549022
+Camden,Oaklyn Public School District,382,212,-0.4450261780104712
+Camden,Pennsauken Township Board Of Education School District,4917,4705,-0.043115720968069926
+Camden,Pine Hill School District,1865,1927,0.03324396782841821
+Camden,Runnemede Public School District,801,729,-0.0898876404494382
+Camden,Somerdale School District,500,429,-0.14200000000000002
+Camden,Sterling Regional School District,961,839,-0.12695109261186266
+Camden,Stratford School District,844,828,-0.018957345971563955
+Camden,Voorhees Township School District,2949,2901,-0.016276703967446626
+Camden,Waterford Township School District,835,761,-0.08862275449101797
+Camden,Winslow Township School District,4670,4644,-0.005567451820128522
+Camden,Woodlynne School District,358,365,0.019553072625698276
+Cape May,Avalon School District,50,69,0.3799999999999999
+Cape May,Cape May City School District,135,111,-0.1777777777777778
+Cape May,Cape May County Special Services School District,242.5,229.5,-0.053608247422680444
+Cape May,Cape May County Technical High School District,648.5,609.5,-0.06013878180416343
+Cape May,Dennis Township School District,509,549,0.07858546168958735
+Cape May,Lower Cape May Regional School District,1427,1111,-0.22144358794674146
+Cape May,Lower Township Elementary School District,1621,1146,-0.29302899444787167
+Cape May,Middle Township Public School District,2353.5,2360.5,0.0029742936052687963
+Cape May,North Wildwood School District,279,145,-0.48028673835125446
+Cape May,Ocean City School District,2150.5,1644.5,-0.23529411764705888
+Cape May,Stone Harbor School District,68,87,0.27941176470588225
+Cape May,Upper Township School District,1363,1292,-0.052090975788701366
+Cape May,West Cape May School District,75,76,0.01333333333333342
+Cape May,Wildwood City School District,813,720,-0.11439114391143912
+Cape May,Wildwood Crest Borough School District,225,174,-0.22666666666666668
+Cape May,Woodbine School District,160,202,0.26249999999999996
+Cumberland,Bridgeton City School District,5282.5,5397,0.021675343114055945
+Cumberland,Commercial Township School District,506,361,-0.2865612648221344
+Cumberland,Cumberland County Board Of Vocational Education,347.5,1296,2.729496402877698
+Cumberland,Cumberland Regional School District,1296.5,1161,-0.10451214809101428
+Cumberland,Deerfield Township School District,314,269,-0.143312101910828
+Cumberland,Downe Township School District,165,145,-0.12121212121212122
+Cumberland,Fairfield Township School District,512,445,-0.130859375
+Cumberland,Greenwich Township School District,53,75,0.4150943396226414
+Cumberland,Hopewell Township School District,496,449,-0.094758064516129
+Cumberland,Lawrence Township School District,466,421,-0.09656652360515017
+Cumberland,Maurice River Township School District,398,324,-0.18592964824120606
+Cumberland,Millville School District,5105.5,4438,-0.13074135735971015
+Cumberland,Stow Creek Township School District,111,108,-0.027027027027026973
+Cumberland,Upper Deerfield Township School District,850,816,-0.040000000000000036
+Cumberland,Vineland Public School District,9274,9051,-0.024045719215009753
+Essex,Belleville Public School District,4468,4493,0.005595344673231972
+Essex,Bloomfield Township School District,6175,6244,0.011174089068825888
+Essex,Caldwell-West School District,2621.5,2470,-0.05779134083539961
+Essex,Cedar Grove Township School District,1637,1515.5,-0.07422113622480142
+Essex,East Orange School District,8949.5,8038,-0.10184926532208505
+Essex,Essex Regional Educational Services Commission,51,86,0.6862745098039216
+Essex,Essex County Schools Of Technology,2240,2220.5,-0.00870535714285714
+Essex,Essex Fells School District,184,228,0.23913043478260865
+Essex,Fairfield Public School District,602,683,0.13455149501661134
+Essex,Glen Ridge Public School District,1846,1680.5,-0.08965330444203679
+Essex,Irvington Public School District,6335,6805,0.07419100236779785
+Essex,Livingston Board Of Education School District,5857.5,6311.5,0.07750746905676476
+Essex,Millburn Township School District,4823,4495.5,-0.06790379431888871
+Essex,Montclair Public School District,6613,5915,-0.10554967488280664
+Essex,Newark Public School District,31041,37560,0.21001256402822066
+Essex,North Caldwell School District,634,663,0.045741324921135584
+Essex,Nutley Public School District,3979.5,4058,0.019726096243246616
+Essex,Orange Board Of Education School District,4839.5,5173,0.06891207769397667
+Essex,Roseland School District,414,432,0.04347826086956519
+Essex,South Orange-Maplewood School District,6842.5,6621,-0.03237120935330651
+Essex,Verona Public School District,2128,2131.5,0.00164473684210531
+Essex,West Essex Regional School District,1646,1616.5,-0.017922235722964808
+Essex,West Orange Public Schools,6699,6491,-0.03104941035975517
+Gloucester,Clayton Public School District,1351,1311,-0.02960769800148033
+Gloucester,Clearview Regional High School District,2456,2045,-0.1673452768729642
+Gloucester,Deptford Township Public School District,4120.5,3786,-0.08117946851110303
+Gloucester,East Greenwich Township School District,1225,1138,-0.07102040816326527
+Gloucester,Elk Township School District,328,305,-0.07012195121951215
+Gloucester,Township Of Franklin School District,1389,1263,-0.09071274298056153
+Gloucester,Gateway Regional High School District,959.5,862,-0.10161542470036478
+Gloucester,Glassboro School District,2006,1821,-0.09222333000997007
+Gloucester,Gloucester County Special Services School District,653,462,-0.29249617151607965
+Gloucester,Gloucester County Vocational-Technical School District,1339,1657,0.2374906646751307
+Gloucester,Greenwich Township School District,466,377,-0.1909871244635193
+Gloucester,Harrison Township School District,1463,1291,-0.11756664388243332
+Gloucester,Kingsway Regional School District,2531,2752.5,0.08751481627815094
+Gloucester,Logan Township School District,787,703,-0.10673443456162646
+Gloucester,Mantua Township School District,1232,1091,-0.11444805194805197
+Gloucester,Monroe Township Public School District,6037,5435,-0.0997184031803876
+Gloucester,National Park Boro School District,237,236,-0.00421940928270037
+Gloucester,Paulsboro School District,1104,1098,-0.005434782608695676
+Gloucester,Pitman Boro School District,1236,994,-0.19579288025889963
+Gloucester,South Harrison Township School District,371,285,-0.2318059299191375
+Gloucester,Delsea Regional High School District,1700,1558,-0.08352941176470585
+Gloucester,Swedesboro-Woolwich School District,1704,1569,-0.079225352112676
+Gloucester,Washington Township School District,7308,6939,-0.05049261083743839
+Gloucester,Wenonah  Boro School District,208,147,-0.2932692307692307
+Gloucester,West Deptford Township School District,3008.5,2612,-0.13179325245138773
+Gloucester,Westville Boro Public School District,332,301,-0.09337349397590367
+Gloucester,Woodbury City Public School District,1451,1550,0.06822880771881468
+Gloucester,Woodbury Heights Public School District,220,233,0.05909090909090908
+Hudson,Bayonne School District,9188,9523.5,0.036515019590770637
+Hudson,East Newark School District,240,176,-0.2666666666666667
+Hudson,Guttenberg School District,943,943,0
+Hudson,Harrison Public Schools,2082,2163,0.03890489913544659
+Hudson,Hoboken Public School District,1726,2698,0.563151796060255
+Hudson,Hudson County Schools Of Technology School District,1866,2497.5,0.33842443729903526
+Hudson,Jersey City Public Schools,25423,21884,-0.13920465720017305
+Hudson,Kearny,5663,5029,-0.11195479427865085
+Hudson,North Bergen School District,7772,6801,-0.12493566649511068
+Hudson,Secaucus School District,2095,2035,-0.02863961813842486
+Hudson,Union City School District,11495,11130,-0.03175293605915619
+Hudson,Weehawken Public School District,1222,1244,0.018003273322422242
+Hudson,West New York School District,7167,7004,-0.022743128226594078
+Hunterdon,Alexandria Township School District,467,390,-0.16488222698072807
+Hunterdon,Bethlehem Township School District,400,348,-0.13
+Hunterdon,Bloomsbury Borough School District,112,88,-0.2142857142857143
+Hunterdon,Califon Borough School District,98,82,-0.16326530612244894
+Hunterdon,Clinton-Glen Gardner School District,460,461,0.0021739130434783593
+Hunterdon,Clinton Township School District,1404,1159,-0.17450142450142447
+Hunterdon,Delaware Township School District,358,365,0.019553072625698276
+Hunterdon,Delaware Valley Regional High School District,859,673,-0.2165308498253784
+Hunterdon,East Amwell Township School District,373,348,-0.06702412868632712
+Hunterdon,South Hunterdon Regional School District,941,708.5,-0.2470775770456961
+Hunterdon,Flemington-Raritan Regional School District,3305,3076,-0.06928895612708019
+Hunterdon,Franklin Township School District,283,268,-0.05300353356890464
+Hunterdon,Frenchtown Borough School District,128,86,-0.328125
+Hunterdon,Hampton Borough School District,98,89,-0.09183673469387754
+Hunterdon,High Bridge Borough School District,357,297,-0.16806722689075626
+Hunterdon,Holland Township School District,558,458,-0.1792114695340502
+Hunterdon,Hunterdon Central Regional High School District,2935.5,2178,-0.25804803270311705
+Hunterdon,Hunterdon County Vocational School District,249.5,594,1.3807615230460923
+Hunterdon,Kingwood Township School District,344,312,-0.09302325581395354
+Hunterdon,Lebanon Borough School District,84,76,-0.09523809523809523
+Hunterdon,Lebanon Township School District,659,508,-0.22913505311077387
+Hunterdon,Milford Borough School District,79,51,-0.35443037974683544
+Hunterdon,North Hunterdon-Voorhees Regional High School District,2650,1909.5,-0.27943396226415096
+Hunterdon,Readington Township School District,1709,1356,-0.20655354008191928
+Hunterdon,Tewksbury Township School District,649,458,-0.29429892141756553
+Hunterdon,Union Township School District,473,452,-0.04439746300211411
+Mercer,East Windsor Regional School District,5075,4899,-0.03467980295566497
+Mercer,Ewing Township School District,3564,3469.5,-0.02651515151515149
+Mercer,Marie H. Katzenbach School For The Deaf,NA,89,-0.02197802197802201
+Mercer,Hamilton Township Public School District,11645.5,11955.5,0.026619724357047847
+Mercer,Hopewell Valley Regional School District,3588.5,3328,-0.07259300543402536
+Mercer,Lawrence Township Public School District,3935.5,3552.5,-0.0973192732816669
+Mercer,Mercer County Special Services School District,638.5,441,-0.3093187157400157
+Mercer,Area Vocational Technical School District Of Mercer County,487.5,817,0.6758974358974359
+Mercer,Princeton Public School District,3497,3599,0.029167858164140803
+Mercer,Trenton Public School District,11012,13548.5,0.23033962949509634
+Mercer,Robbinsville Public School District,2931,2874,-0.019447287615148467
+Mercer,West Windsor-Plainsboro Regional School District,9613,8738,-0.09102257359825239
+Middlesex,Carteret Public School District,3571,3687,0.03248389806776819
+Middlesex,Cranbury Township School District,503,407,-0.1908548707753479
+Middlesex,Dunellen Public School District,1145.5,1301,0.13574858140549972
+Middlesex,East Brunswick Township School District,8147.5,7951,-0.024117827554464566
+Middlesex,Edison Township School District,14566,16388,0.1250858162844981
+Middlesex,Highland Park Boro School District,1550,1467,-0.05354838709677423
+Middlesex,Jamesburg Public School District,604,597,-0.011589403973509937
+Middlesex,Metuchen Public School District,2145,2283,0.06433566433566429
+Middlesex,Middlesex Borough School District,2052.5,1987.5,-0.03166869671132766
+Middlesex,Educational Services Commission Of New Jersey,697,689,-0.011477761836441891
+Middlesex,Middlesex County Vocational And Technical School District,2003.5,2124,0.06014474669328673
+Middlesex,Milltown School District,670.5,764,0.13944817300521994
+Middlesex,Monroe Township School District,6293.5,6674.5,0.060538650989115705
+Middlesex,New Brunswick School District,8323.5,8004,-0.038385294647684254
+Middlesex,North Brunswick Township School District,6069,5370,-0.11517548195748883
+Middlesex,Old Bridge Township School District,8975,7920.5,-0.11749303621169915
+Middlesex,Perth Amboy Public School District,9330.5,8926,-0.043352446278334456
+Middlesex,Piscataway Township School District,7203,6675,-0.07330279050395672
+Middlesex,Sayreville School District,6023,5695.5,-0.05437489623111402
+Middlesex,South Amboy School District,1044.5,1093.5,0.04691239827668747
+Middlesex,South Brunswick School District,8582.5,7260,-0.15409263035246146
+Middlesex,South Plainfield School District,3409,3533,0.036374303314755
+Middlesex,South River Public School District,2226.5,2214,-0.0056141926790928
+Middlesex,Spotswood Public School District,1725,1568,-0.09101449275362317
+Middlesex,Woodbridge Township School District,13589,13632.5,0.003201118551769744
+Monmouth,Asbury Park School District,1881,1200,-0.36204146730462516
+Monmouth,Avon Boro School District,153,99,-0.3529411764705882
+Monmouth,Bayshore Jointure Commission School District,57,60,0.05263157894736836
+Monmouth,Belmar Elementary School District,500,338,-0.32399999999999995
+Monmouth,Bradley Beach School District,275,162,-0.4109090909090909
+Monmouth,Brielle Boro School District,548,461,-0.15875912408759119
+Monmouth,Colts Neck Township School District,933,950,0.018220793140407254
+Monmouth,Deal Boro School District,163,160,-0.018404907975460127
+Monmouth,Eatontown Public School District,1015,852,-0.1605911330049261
+Monmouth,Fair Haven School District,979,921,-0.05924412665985701
+Monmouth,Farmingdale Public School District,155,141,-0.0903225806451613
+Monmouth,Freehold Borough School District,1571,1417,-0.09802673456397204
+Monmouth,Freehold Regional High School District,11133,9702.5,-0.1284918710141022
+Monmouth,Freehold Township School District,3855,3271,-0.1514915693904021
+Monmouth,Hazlet Township Public School District,2946,2498,-0.15207060420909713
+Monmouth,Holmdel Township School District,2976,2725.5,-0.08417338709677424
+Monmouth,Howell Township Public School District,6064,5325,-0.12186675461741425
+Monmouth,Keansburg School District,1284.5,1291.5,0.005449591280654031
+Monmouth,Keyport School District,1013.5,861.5,-0.1499753330044401
+Monmouth,Little Silver Boro School District,827,672,-0.18742442563482464
+Monmouth,Long Branch Public School District,4816.5,4752,-0.013391466832762378
+Monmouth,Manalapan-Englishtown Regional School District,5066,4413,-0.12889853928148443
+Monmouth,Manasquan School District,1601.5,1339,-0.16390883546674995
+Monmouth,Marlboro Township School District,5092,4426,-0.13079340141398277
+Monmouth,Matawan-Aberdeen Regional School District,3793.5,3466.5,-0.08620007908264138
+Monmouth,Middletown Township Public School District,9504,8479,-0.10784932659932656
+Monmouth,Millstone Township School District,1159,1068,-0.07851596203623812
+Monmouth,Monmouth Beach School District,255,192,-0.24705882352941178
+Monmouth,Monmouth-Ocean Educational Services Commission School Distri,30,22,0.375
+Monmouth,Monmouth County Vocational School District,2257,2078,-0.07930881701373504
+Monmouth,Monmouth Regional High School,950.5,867.5,-0.08732246186217785
+Monmouth,Neptune City School District,370,225,-0.3918918918918919
+Monmouth,Neptune Township School District,3891.5,2968.5,-0.23718360529358862
+Monmouth,Township Of Ocean School District,3679,2819.5,-0.23362326719217175
+Monmouth,Oceanport School District,592,536,-0.09459459459459463
+Monmouth,Red Bank Borough Public School District,1114,1030,-0.07540394973070019
+Monmouth,Red Bank Regional School District,1220.5,1235,0.011880376894715328
+Monmouth,Roosevelt Borough Public School District,88,65,-0.26136363636363635
+Monmouth,Rumson Borough School District,951,883,-0.07150368033648791
+Monmouth,Rumson-Fair Haven Regional High School District,933,814.5,-0.12700964630225076
+Monmouth,Sea Girt Borough School District,146,136,-0.06849315068493156
+Monmouth,Shore Regional High School District,615,551,-0.10406504065040656
+Monmouth,Shrewsbury Borough School District,467,424,-0.09207708779443258
+Monmouth,Spring Lake Borough,199,108,-0.457286432160804
+Monmouth,Spring Lake Heights School District,345,272,-0.2115942028985507
+Monmouth,Tinton Falls School District,1506,1300,-0.13678618857901725
+Monmouth,Union Beach Public School District,580,531,-0.08448275862068966
+Monmouth,Upper Freehold Regional School District,2288.5,1963,-0.14223290364867813
+Monmouth,Wall Township Public School District,3605.5,3089,-0.14325336291776458
+Monmouth,West Long Branch School District,555,496,-0.10630630630630633
+Morris,Boonton Town Public School District,1159.5,1404.5,0.21129797326433808
+Morris,Boonton Township School District,448,382,-0.1473214285714286
+Morris,Butler Public School District,1146.5,1120.5,-0.022677714784125613
+Morris,School District Of The Chathams,4089,3501,-0.14380044020542915
+Morris,Chester Township School District,1137,934,-0.17854001759014948
+Morris,Denville Township K-8 School District,1648,1688,0.024271844660194164
+Morris,Dover Public School District,3089,3126.5,0.012139851084493447
+Morris,East Hanover Township School District,959,967,0.008342022940563076
+Morris,Florham Park School District,978,920,-0.059304703476482645
+Morris,Hanover Park Regional High School District,1587,1254,-0.20982986767485823
+Morris,Hanover Township School District,1463,1218,-0.16746411483253587
+Morris,Harding Township School District,289,280,-0.03114186851211076
+Morris,Jefferson Township Public School District,3199,2329,-0.2719599874960925
+Morris,Kinnelon School District,1994.5,1594.5,-0.2005515166708448
+Morris,Lincoln Park School District,923,826,-0.10509209100758399
+Morris,Madison Public School District,2524.5,2326,-0.07862943157060809
+Morris,Mendham Borough School District,586,473,-0.19283276450511944
+Morris,Mendham Township School District,686,741,0.08017492711370267
+Morris,Mine Hill Township School District,352,345,-0.019886363636363646
+Morris,Montville Township School District,3862.5,3414,-0.11611650485436897
+Morris,Educational Services Commission Of Morris County,67,22,-0.6716417910447761
+Morris,Morris County Vocational School District,998,1569.5,0.5726452905811623
+Morris,Morris Hills Regional School District,2762.5,2560,-0.07330316742081444
+Morris,Morris Plains School District,595,592,-0.005042016806722671
+Morris,Morris School District,5068.5,5002,-0.013120252540199218
+Morris,Mount Arlington Public School District,345,363,0.05217391304347818
+Morris,Mount Olive Township School District,4670.5,4640,-0.006530350069585689
+Morris,Mountain Lakes Public School District,1532.5,1296.5,-0.15399673735725938
+Morris,Netcong School District,275,268,-0.025454545454545507
+Morris,Parsippany-Troy Hills Township School District,6787,6831.5,0.0065566524237512525
+Morris,Long Hill Township School District,805,828,0.02857142857142847
+Morris,Pequannock Township School District,2207,2018.5,-0.08541005890348885
+Morris,Randolph Township School District,4779,4123,-0.13726721071353842
+Morris,Riverdale School District,308,257,-0.1655844155844156
+Morris,Rockaway Borough School District,555,547,-0.014414414414414378
+Morris,Rockaway Township School District,2329,2348,0.00815800772863895
+Morris,Roxbury Township School District,3696.5,3310.5,-0.10442310293520896
+Morris,Washington Township School District,2272,1928,-0.15140845070422537
+Morris,West Morris Regional High School District,2671.5,2008,-0.24836234325285422
+Morris,Wharton Borough School District,780,691,-0.11410256410256414
+Ocean,Barnegat Township School District,3133.5,3312,0.05696505505026339
+Ocean,Bay Head Borough School District,147,124,-0.15646258503401356
+Ocean,Beach Haven School District,59,47,-0.2033898305084746
+Ocean,Berkeley Township School District,2059,1981,-0.03788246721709565
+Ocean,Brick Township Public School District,9071.5,7520,-0.1710301493689026
+Ocean,Central Regional School District,1951,2106.5,0.07970271655561256
+Ocean,Eagleswood Township School District,120,107,-0.10833333333333328
+Ocean,Island Heights School District,119,118,-0.008403361344537785
+Ocean,Jackson Township School District,8700,6787.5,-0.21982758620689657
+Ocean,Lacey Township School District,4289.5,3507.5,-0.18230563002680966
+Ocean,Lakehurst School District,350,332,-0.05142857142857138
+Ocean,Lakewood Township School District,5611,3770,-0.3281055070397434
+Ocean,Lavallette Borough School District,138,126,-0.08695652173913049
+Ocean,Little Egg Harbor Township School District,1343,1362,0.014147431124348575
+Ocean,Long Beach Island School District,210,172,-0.18095238095238098
+Ocean,Manchester Township School District,2979.5,2627,-0.11830844101359284
+Ocean,Ocean County Vocational Technical School District,1381,1490.5,0.07929036929761035
+Ocean,Ocean Gate School District,139,114,-0.17985611510791366
+Ocean,Ocean Township School District,504,439,-0.12896825396825395
+Ocean,Pinelands Regional School District,1580.5,1516,-0.04080987029421068
+Ocean,Plumsted Township School District,1451.5,1060,-0.2697209782983121
+Ocean,Point Pleasant Borough School District,2777,2593,-0.06625855239467049
+Ocean,Point Pleasant Beach School District,804,611,-0.24004975124378114
+Ocean,Seaside Heights School District,200,132,-0.33999999999999997
+Ocean,Southern Regional School District,2938,2630,-0.10483321987746763
+Ocean,Stafford Township School District,2112,2193,0.03835227272727271
+Ocean,Toms River Regional School District,15759,13739.5,-0.12814899422552195
+Ocean,Tuckerton Borough School District,315,254,-0.19365079365079363
+Passaic,Bloomingdale School District,590,563,-0.045762711864406724
+Passaic,Clifton Public School District,10840,10020,-0.07564575645756455
+Passaic,Haledon Public School District,987,914,-0.07396149949341435
+Passaic,Hawthorne Public School District,2279,2085,-0.08512505484861776
+Passaic,Lakeland Regional High School District,953.5,819,-0.14105925537493447
+Passaic,Little Falls Township Public School District,880,905,0.02840909090909083
+Passaic,North Haledon School District,706,590,-0.1643059490084986
+Passaic,Passaic City School District,12597,10541,-0.1632134635230611
+Passaic,Northern Region Educational Services Commission,72,59,-0.18055555555555558
+Passaic,Passaic County Manchester Regional High School District,896,803,-0.1037946428571429
+Passaic,Passaic Valley Regional High School District,1347.5,1093,-0.18886827458256028
+Passaic,Passaic County Technical-Vocational School District,3355.5,4605,0.37237371479660264
+Passaic,Paterson Public School District,24482,20545,-0.16081202516134308
+Passaic,Pompton Lakes School District,1688.5,1657,-0.01865561148948769
+Passaic,Prospect Park Public School District,796,671,-0.15703517587939697
+Passaic,Ringwood School District,1220,960,-0.21311475409836067
+Passaic,Totowa Public School District,1018,831,-0.18369351669941059
+Passaic,Wanaque School District,954,845,-0.11425576519916147
+Passaic,Wayne Township Public School District,7973.5,7372,-0.07543738634225872
+Passaic,West Milford Township Public School District,3579,2864,-0.19977647387538422
+Passaic,Woodland Park School District,1096,1097,9.124087591241281e-4
+Salem,Alloway Twp School District,349,246,-0.2951289398280802
+Salem,Elsinboro Township School District,124,105,-0.15322580645161288
+Salem,The Lower Alloways Creek School District,169,155,-0.08284023668639051
+Salem,Mannington Township School District,167,140,-0.16167664670658688
+Salem,Oldmans Township School District,265,293,0.10566037735849054
+Salem,Penns Grove-Carneys Point Regional School District,2115.5,2031.5,-0.03970692507681395
+Salem,Pennsville School District,1694.5,1677,-0.010327530244909955
+Salem,Pittsgrove Township School District,1644,1523,-0.07360097323600978
+Salem,Quinton Township School District,328,241,-0.2652439024390244
+Salem,Salem City School District,1000.5,1147.5,0.14692653673163414
+Salem,Salem County Special Services School District,207,163,-0.2125603864734299
+Salem,Salem County Vocational Technical School District,826,792,-0.041162227602905554
+Salem,Upper Pittsgrove Twp School District,339,300,-0.11504424778761058
+Salem,Woodstown-Pilesgrove Regional School District,1449.5,1376,-0.05070714039323909
+Somerset,Bedminster Township Public School District,538,393,-0.26951672862453535
+Somerset,Bernards Township School District,5672,4573,-0.1937588152327221
+Somerset,Bound Brook School District,1730.5,1775,0.02571511123952619
+Somerset,Branchburg Township School District,1541,1361,-0.11680726800778718
+Somerset,Bridgewater-Raritan Regional School District,8529,7569.5,-0.11249853441200608
+Somerset,Franklin Township Public School District,7296.5,6484.5,-0.11128623312547115
+Somerset,Green Brook Township Public School District,890,664,-0.2539325842696629
+Somerset,Hillsborough Township Public School District,7185.5,7063.5,-0.01697863753392248
+Somerset,Manville School District,1413,1595,0.12880396319886755
+Somerset,Montgomery Township School District,4708,4341.5,-0.07784621920135937
+Somerset,North Plainfield School District,3268.5,3407.5,0.04252715312834643
+Somerset,Somerset County Educational Services Commission School Distr,163,141,-0.13496932515337423
+Somerset,Somerset County Vocational And Technical School District,443.5,502.5,0.13303269447576094
+Somerset,Somerset Hills Regional School District,2029.5,1580,-0.2214831239221483
+Somerset,Somerville Public School District,2264,2054,-0.09275618374558303
+Somerset,South Bound Brook Public School District,439,420,-0.0432801822323462
+Somerset,Warren Township School District,1813,1581,-0.12796469939327082
+Somerset,Watchung Borough School District,665,638,-0.04060150375939853
+Somerset,Watchung Hills Regional High School District,2197.5,1638,-0.2546075085324232
+Sussex,Andover Regional School District,547,423,-0.226691042047532
+Sussex,Byram Township School District,895,754,-0.15754189944134078
+Sussex,Frankford Township Consolidated School District,526,480,-0.0874524714828897
+Sussex,Franklin Borough School District,458,458,0
+Sussex,Fredon Township School District,250,177,-0.29200000000000004
+Sussex,Green Township School District,470,404,-0.1404255319148936
+Sussex,Hamburg School District,262,193,-0.26335877862595425
+Sussex,Hampton Township School District,317,295,-0.06940063091482651
+Sussex,Hardyston Township School District,727,550,-0.2434662998624484
+Sussex,High Point Regional High School District,998.5,781,-0.21782674011016523
+Sussex,Hopatcong Borough School District,1669,1381,-0.1725584182144997
+Sussex,Kittatinny Regional School District,1074,726,-0.3240223463687151
+Sussex,Lafayette Township School District,244,205,-0.1598360655737705
+Sussex,Lenape Valley Regional High School District,821,661.5,-0.19427527405602918
+Sussex,Montague Township School District,217,275,0.26728110599078336
+Sussex,Newton Public School District,1515,1382,-0.08778877887788783
+Sussex,Ogdensburg Borough School District,264,231,-0.125
+Sussex,Sandyston-Walpack Consolidated School District,145,118,-0.18620689655172418
+Sussex,Sparta Township Public School District,3254.5,3163,-0.028114917806114637
+Sussex,Stanhope School District,312,323,0.03525641025641035
+Sussex,Stillwater Township School District,324,242,-0.25308641975308643
+Sussex,Sussex-Wantage Regional School District,1141,1007,-0.11744084136722177
+Sussex,Sussex County Educational Services Commission,38,44,0.1578947368421053
+Sussex,Sussex County Technical School District,765.5,701.5,-0.08360548661005873
+Sussex,Vernon Township School District,3286,2789.5,-0.15109555690809495
+Sussex,Wallkill Valley Regional High School,654.5,581,-0.11229946524064172
+Union,Berkeley Heights School District,2623,2275.5,-0.13248189096454444
+Union,Clark Township Public School District,2263,2227.5,-0.01568714096332302
+Union,Cranford Public School District,3808,3707.5,-0.026391806722689037
+Union,Elizabeth Public Schools,23048,25074.5,0.087925199583478
+Union,Garwood Boro,371,372,0.0026954177897573484
+Union,Hillside Public School District,2900,2689.5,-0.07258620689655171
+Union,Kenilworth School District,1389,1373,-0.011519078473722133
+Union,Linden Public School District,5707.5,6039.5,0.05816907577748576
+Union,Morris-Union Jointure Commission School District,256,189,-0.26171875
+Union,Mountainside School District,735,723,-0.01632653061224487
+Union,New Providence School District,2291.5,2226.5,-0.028365699323587124
+Union,Plainfield Public School District,7544.5,8447.5,0.11968984028099938
+Union,Rahway Public School District,3602.5,3786,0.05093684941013188
+Union,Roselle Public School District,2668,3062.5,0.14786356821589197
+Union,Roselle Park Public School District,1938,1867,-0.0366357069143447
+Union,Scotch Plains-Fanwood School District,5323,5500.5,0.03334585759909836
+Union,Springfield Public School District,2182,2053.5,-0.05889092575618693
+Union,Summit Public School District,4006.5,3944,-0.015599650567827306
+Union,Union County Educational Services Commission,338,312,-0.07692307692307687
+Union,Union County Vocational-Technical School District,1639,2002,0.2214765100671141
+Union,Township Of Union School District,7262.5,7281,0.0025473321858864306
+Union,Westfield Public School District,6201,5739,-0.07450411223996134
+Union,Winfield Township,128,127,-0.0078125
+Warren,Allamuchy Township School District,432,372,-0.13888888888888884
+Warren,Alpha Borough School District,216,197,-0.08796296296296291
+Warren,Belvidere School District,763,538,-0.29488859764089126
+Warren,Blairstown Elementary Township School District,529,389,-0.2646502835538752
+Warren,Franklin Township School District,205,205,0
+Warren,Frelinghuysen Township School District,142,105,-0.2605633802816901
+Warren,Great Meadows Regional School District,760,633,-0.16710526315789476
+Warren,Greenwich Township School District,761,567,-0.25492772667542707
+Warren,Hackettstown Public School District,1889,1923,0.017998941238750676
+Warren,Harmony Township School District,234,165,-0.2948717948717948
+Warren,Hope Township School District,157,112,-0.2866242038216561
+Warren,Knowlton Township School District,214,161,-0.24766355140186913
+Warren,Lopatcong Township School District,808,686,-0.150990099009901
+Warren,Mansfield Township Elementary School District,686,542,-0.20991253644314867
+Warren,North Warren Regional,911,582,-0.3611416026344676
+Warren,Oxford Township School District,295,227,-0.23050847457627122
+Warren,Phillipsburg School District,3467.5,3639.5,0.049603460706560965
+Warren,Pohatcong Township School District,320,275,-0.140625
+Warren,Warren County Vocational Technical School,484,413,-0.14669421487603307
+Warren,Warren Hills Regional School District,1886,1526.5,-0.19061505832449632
+Warren,Washington Borough School District,548,496,-0.0948905109489051
+Warren,Washington Township School District,497,408,-0.17907444668008043
+Warren,White Township Consolidated School District,303,252,-0.16831683168316836
+State Total,State Total,1333796,1293951,-0.029873383935774322
+Atlantic,County Total,42936,37936,-0.116452394261226
+Bergen,County Total,131649,127325,-0.032844913368122786
+Burlington,County Total,68612.5,64817,-0.05531790854436147
+Camden,County Total,74255,74099,-0.0021008686283752187
+Cape May,County Total,12120,10526,-0.13151815181518156
+Cumberland,County Total,25177,24756,-0.016721610994161362
+Essex,County Total,110626,115931.5,0.04795888850722263
+Gloucester,County Total,47222.5,43821.5,-0.07202075281910103
+Hudson,County Total,76882,73128,-0.048828074191618276
+Hunterdon,County Total,20117,16791,-0.16533280310185416
+Mercer,County Total,55987.5,57311,0.030467577067956553
+Middlesex,County Total,120449.5,118212,-0.01857624979763306
+Monmouth,County Total,96728.5,83657.5,-0.1351308042614121
+Morris,County Total,75624.5,70047.5,-0.07374594212193142
+Ocean,County Total,70242,60771.5,-0.13482674183536913
+Passaic,County Total,78310.5,69839,-0.10817834134630733
+Salem,County Total,10678,10190,-0.04570144221764372
+Somerset,County Total,52786.5,47782,-0.09480643725194893
+Sussex,County Total,21175,18345.5,-0.13362455726092093
+Union,County Total,88225,91019.5,0.03167469538112777
+Warren,County Total,16540.5,14414,-0.12856322360267225

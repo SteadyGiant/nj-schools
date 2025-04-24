@@ -14,6 +14,7 @@ all_df = list()
 ### 2019 - 2023
 
 files = list(
+  "2024" = "data/raw/enrollment_2425.xlsx",
   "2023" = "data/raw/enrollment_2324.xlsx",
   "2022" = "data/raw/enrollment_2223.xlsx",
   "2021" = "data/raw/enrollment_2122.xlsx",
@@ -230,19 +231,19 @@ rm(state_total, sum_counties, year)
 ### Export ###
 ##############
 
-readr::write_csv(all, "data/clean/enrollment_2012-13_2023-24.csv")
+readr::write_csv(all, "data/clean/enrollment__2014-15_2024-25.csv")
 
 all %>%
   dplyr::filter(
-    YEAR %in% c(2013, 2023),
+    YEAR %in% c(2014, 2024),
     COUNTY_NAME != "Charters"
   ) %>%
   dplyr::select(
     YEAR_LONG,
-    County             = COUNTY_NAME,
-    `School district`  = DISTRICT_NAME,
-    `K-12 enrollment`  = K12_ENROLLMENT,
-    `% change`         = PCT_CHG_10Y_K12_ENROLLMENT
+    County            = COUNTY_NAME,
+    `School district` = DISTRICT_NAME,
+    `K-12 enrollment` = K12_ENROLLMENT,
+    `% change`        = PCT_CHG_10Y_K12_ENROLLMENT
   ) %>%
   tidyr::pivot_wider(
     id_cols = c(County, `School district`),
@@ -250,21 +251,32 @@ all %>%
     values_from = c(`K-12 enrollment`, `% change`),
     names_sep = ", "
   ) %>%
-  dplyr::select(-`% change, 2013-14`) %>%
-  dplyr::rename(`% change` = `% change, 2023-24`) %>%
+  dplyr::select(-`% change, 2014-15`) %>%
+  dplyr::rename(`% change` = `% change, 2024-25`) %>%
   dplyr::filter(!is.na(`% change`)) %>%
-  readr::write_csv("data/clean/enrollment_2013-14_2023-24__condensed.csv")
+  readr::write_csv("data/clean/enrollment__2014-15_2024-25__condensed.csv")
 
 all %>%
   dplyr::filter(
     DISTRICT_NAME == "Glassboro School District",
-    YEAR > 2012
+    YEAR > 2013
+  ) %>%
+  dplyr::select(
+    `Academic year`    = YEAR_LONG,
+    `PK-12 enrollment` = PK12_ENROLLMENT,
+    Change             = CHG_PK12_ENROLLMENT,
+    `% change`         = PCT_CHG_PK12_ENROLLMENT,
+    `10-yr % change`   = PCT_CHG_10Y_PK12_ENROLLMENT
+  ) %>%
+  readr::write_csv("data/clean/enrollment__2014-15_2024-25__glassboro.csv")
+
+all %>%
+  dplyr::filter(
+    DISTRICT_NAME == "Glassboro School District",
+    YEAR > 2013
   ) %>%
   dplyr::select(
     `Academic year`     = YEAR_LONG,
-    `PK-12 enrollment`  = PK12_ENROLLMENT,
-    Change              = CHG_PK12_ENROLLMENT,
-    `% change`          = PCT_CHG_PK12_ENROLLMENT,
-    `10-yr % change`    = PCT_CHG_10Y_PK12_ENROLLMENT
+    `PK enrollment`  = PK_ENROLLMENT
   ) %>%
-  readr::write_csv("data/clean/enrollment_2013-14_2023-24__glassboro.csv")
+  readr::write_csv("data/clean/enrollment__pk__2014-15_2024-25__glassboro.csv")
