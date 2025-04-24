@@ -233,7 +233,7 @@ rm(state_total, sum_counties, year)
 
 readr::write_csv(all, "data/clean/enrollment__2014-15_2024-25.csv")
 
-all %>%
+cond = all %>%
   dplyr::filter(
     YEAR %in% c(2014, 2024),
     COUNTY_NAME != "Charters"
@@ -255,6 +255,12 @@ all %>%
   dplyr::rename(`% change` = `% change, 2024-25`) %>%
   dplyr::filter(!is.na(`% change`)) %>%
   readr::write_csv("data/clean/enrollment__2014-15_2024-25__condensed.csv")
+
+cond %>%
+  dplyr::filter(County == "Gloucester") %>%
+  readr::write_csv(
+    "data/clean/enrollment__2014-15_2024-25__condensed__gloucester.csv"
+  )
 
 all %>%
   dplyr::filter(
