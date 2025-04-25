@@ -234,10 +234,7 @@ rm(state_total, sum_counties, year)
 readr::write_csv(all, "data/clean/enrollment__2014-15_2024-25.csv")
 
 cond = all %>%
-  dplyr::filter(
-    YEAR %in% c(2014, 2024),
-    COUNTY_NAME != "Charters"
-  ) %>%
+  dplyr::filter(YEAR %in% c(2014, 2024)) %>%
   dplyr::select(
     YEAR_LONG,
     County            = COUNTY_NAME,

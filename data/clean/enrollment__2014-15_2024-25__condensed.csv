@@ -579,6 +579,73 @@ Warren,Warren Hills Regional School District,1886,1526.5,-0.19061505832449632
 Warren,Washington Borough School District,548,496,-0.0948905109489051
 Warren,Washington Township School District,497,408,-0.17907444668008043
 Warren,White Township Consolidated School District,303,252,-0.16831683168316836
+Charters,Academy Charter High School,195.5,168,-0.14066496163682862
+Charters,Bergen Arts And Science Charter School,959,1276,0.33055265901981223
+Charters,Foundation Academy Charter School,788,1149.5,0.45875634517766506
+Charters,Central Jersey College Prep Charter School,316,1396,3.4177215189873413
+Charters,Pride Academy Charter School District,264,300,0.13636363636363646
+Charters,Community Charter School Of Paterson,810,896,0.10617283950617273
+Charters,Burch Charter School Of Excellence,357,335,-0.06162464985994398
+Charters,Paul Robeson Charter School For The Humanities,373,545,0.4611260053619304
+Charters,Riverbank Charter School Of Excellence,144,159,0.10416666666666674
+Charters,Vineland Public Charter School,300,398,0.32666666666666666
+Charters,Newark Educators Community Charter School,299,96,-0.6789297658862876
+Charters,The Ethical Community Charter School School Distirct,307,341,0.11074918566775249
+Charters,Academy For Urban Leadership Charter School,386,259,-0.3290155440414507
+Charters,The Barack Obama Green Charter High School District,233,356.5,0.5300429184549356
+Charters,Hoboken Dual Language Charter School,291,441,0.5154639175257731
+Charters,Hatikvah International Academy Charter School,298,657,1.2046979865771812
+Charters,Great Oaks Legacy Charter School,352,2110,4.994318181818182
+Charters,Roseville Community Charter School,320,285,-0.109375
+Charters,Atlantic Community Charter School,150,333,1.2200000000000002
+Charters,Dr Lena Edwards Academic Charter School,369,383,0.03794037940379402
+Charters,Millville Public Charter School District,216,327,0.5138888888888888
+Charters,Benjamin Banneker Preparatory Charter School,147,356,1.4217687074829932
+Charters,John P Holland Charter School School District,199,698,2.507537688442211
+Charters,Passaic Arts And Science Charter School,536,2175,3.057835820895522
+Charters,Thomas Edison Energysmart Charter School,296,613,1.070945945945946
+Charters,Beloved Community Charter,598,1573,1.6304347826086958
+Charters,Hope Community Charter School,170,115,-0.32352941176470584
+Charters,Compass Academy Charter School,145,168,0.1586206896551725
+Charters,Jersey City Global Charter School,233,423,0.8154506437768241
+Charters,Phillip's Academy Charter School,372,670,0.8010752688172043
+Charters,Paterson Arts And Science Charter School,420,1330,2.1666666666666665
+Charters,Link Community Charter School,215,343,0.5953488372093023
+Charters,Trenton Stem-To-Civics Charter School,101,562,4.564356435643564
+Charters,Classical Academy Charter School Of Clifton,8,185,22.125
+Charters,Discovery Charter School,74,99,0.33783783783783794
+Charters,East Orange Community Charter School,495,414,-0.1636363636363637
+Charters,Elysian Charter School,290,292,0.006896551724137945
+Charters,Englewood On The Palisades Charter School,204,306,0.5
+Charters,Greater Brunswick Charter School,381,397,0.04199475065616798
+Charters,Gray Charter School,326,317,-0.027607361963190136
+Charters,Hoboken Charter School District,287,299,0.04181184668989557
+Charters,Hope Academy Charter School,203,309,0.5221674876847291
+Charters,International Charter School Of Trenton,90,108,0.19999999999999996
+Charters,Jersey City Community Charter School,579,561,-0.031088082901554404
+Charters,Jersey City Golden Door Charter School,487,618,0.268993839835729
+Charters,Leap Academy University Charter School,1378,1540,0.11756168359941954
+Charters,The Learning Community Charter School,536,590,0.10074626865671643
+Charters,Marion P. Thomas Charter School,1106,1309,0.18354430379746844
+Charters,New Horizons Community Charter School,479,370,-0.2275574112734864
+Charters,North Star Academy Charter School,3403,6714,0.9729650308551279
+Charters,Team Academy Charter School,2729,6406,1.3473799926713084
+Charters,Chartertech High School For The Performing Arts,338,253,-0.25147928994082835
+Charters,Pace Charter School Of Hamilton,221,463,1.0950226244343892
+Charters,Paterson Charter School For Science And Technology,1046,1708,0.632887189292543
+Charters,Princeton Charter School,348,423,0.21551724137931028
+Charters,The Queen City Academy Charter School District,248,378,0.5241935483870968
+Charters,Red Bank Charter School,178,167,-0.061797752808988804
+Charters,Ridge And Valley Charter School,125,134,0.07200000000000006
+Charters,Robert Treat Academy Charter School,625,702,0.12319999999999998
+Charters,Maria L. Varisco-Rogers Charter School,520,572,0.10000000000000009
+Charters,Soaring Heights Charter School,236,272,0.15254237288135597
+Charters,Sussex County Technology Charter School,225,225,0
+Charters,Teaneck Community Charter School,306,377,0.23202614379084974
+Charters,Union County Teams Charter School-High School/College La,338,304,-0.10059171597633132
+Charters,Unity Charter School,202,256,0.26732673267326734
+Charters,University Academy Charter High School,423,429,0.014184397163120588
+Charters,The Village Charter School,359,361,0.0055710306406684396
 State Total,State Total,1333796,1293951,-0.029873383935774322
 Atlantic,County Total,42936,37936,-0.116452394261226
 Bergen,County Total,131649,127325,-0.032844913368122786
@@ -601,3 +668,4 @@ Somerset,County Total,52786.5,47782,-0.09480643725194893
 Sussex,County Total,21175,18345.5,-0.13362455726092093
 Union,County Total,88225,91019.5,0.03167469538112777
 Warren,County Total,16540.5,14414,-0.12856322360267225
+Charters,County Total,37451.5,63230.5,0.6883302404443079
